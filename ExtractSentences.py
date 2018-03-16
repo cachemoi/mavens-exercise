@@ -1,4 +1,5 @@
 import re
+import operator
 
 # ParseInput will parse a UTF8 encoded input text file at each new lines character
 # and return an array containing each lines. Empty lines are ignored and case is removed.
@@ -42,18 +43,27 @@ def FindCombinations(lines):
 
     return subStrings
 
-# SaveOutPut will take an array containing the top sentences and their
-# occurences number and save this to the path specified in csv format, utf-8 encoded
-def SaveOutPut(path, sentences):
+# SaveOutPut will take an array containing the sentences and their
+# occurrences number and save the top occurring ones to the path specified in csv format, utf-8 encoded.
+def SaveOutPut(path, sentences, topNumber):
+
+    # sort the substrings in descending order of occurrences
+    sorted_x = sorted(sentences.items(), key=operator.itemgetter(1), reverse=True)
+
+    # extract top occurring substrings
+    topOccuring = []
+    for i in range(0, topNumber):
+        topOccuring.append(sorted_x[i])
+
     with open(path, 'w', encoding="utf-8") as f:
         f.write('sentence , occurrences \n')
-        for sentence, occurrences in sentences.items():
-            f.write(sentence + ' , ' + str(occurrences) + '\n')
+        for subStringDat in topOccuring:
+            f.write(subStringDat[0] + ' , ' + str(subStringDat[1]) + '\n')
 
+#---------------------------------------------------------------
+# Example run
 #---------------------------------------------------------------
 
 lines = ParseInput("/home/cachemoi/Desktop/Programs/Python/mavens/data/Mavens_0_Dev_SecondInterviewTest-TestData_v0.1_09-March-2018.txt")
-
 subStrings = FindCombinations(lines)
-
-SaveOutPut('/home/cachemoi/Desktop/Programs/Python/mavens/data/results.csv', subStrings)
+SaveOutPut('/home/cachemoi/Desktop/Programs/Python/mavens/data/results.csv', subStrings, 11)
