@@ -38,7 +38,7 @@ The algorithm is available in scikit-learn:
 
 #### Unsupervised machine learning
 
-An alternative to using training data to generate the predictive model is to rely on clustering algorithms. In this case we provide unlabelled data and rely on the algorithm to assign labels to it. Since we have a labelled dataset this is not necessarily a good option. The problem of this approach is that it is computationally expensive.
+An alternative to using training data to generate the predictive model is to rely on clustering algorithms. In this case we provide unlabelled data and rely on the algorithm to assign labels to it. Since we have a labelled dataset this is not necessarily a good option. The problem of this approach is that it is computationally expensive. I therefore do not recommend this option.
 
 #### Deep Learning
 
@@ -58,9 +58,9 @@ The [**Google Cloud Natural Language API**](https://cloud.google.com/natural-lan
 
 #### Conclusions
 
-I would recommend using existing solutions for this problem, and simply rely on already implemented sentiment analysis APIs. This is because training our own predictive models would expend unnecessary resources and we will never have access to the same amount of training data as companies such as google or microsoft.
+I would recommend using existing solutions for this problem, and simply rely on already implemented sentiment analysis APIs. This is because training our own predictive models would expend unnecessary resources and we will never have access to the same amount of training data as companies like Google.
 
-The completed method would take in an arbitrary number of sentences, assign them the positive or negative labels, and return the labelled data in a dictionary. The pseudocode is as follows:
+The completed method would take in an arbitrary number of sentences, assign them the positive or negative labels, and return the labelled data in a hash map. The pseudocode is as follows:
 ```
 function analyseSentences (sentences) {
     
