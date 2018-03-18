@@ -27,7 +27,7 @@ A straightforward approach would be to assign a sentiment score to each word and
 
 In addition, [SentiWordNet](http://sentiwordnet.isti.cnr.it/) provides a large labelled lexicon of words with associated positive and negative sentiment scores.
 
-The feature vector we would use is therefore `[overall sentiment score, sentence]` and our predictive model would yield a binary label `[pos, neg]`
+We would therefore use `[overall sentiment score]` as a feature and our predictive model would yield a binary label `[pos, neg]`
 
 The algorithm I would use is Naive Bayes.
 
