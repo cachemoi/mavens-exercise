@@ -1,8 +1,6 @@
 # Mavens exercise
-=========
 
 ## Coding exercise
-==========
 
 The ExtractSentence script will takes as input a file containing short pieces of text, one per line, UTF-8 encoded. 
 The code reads the texts from the file and computes
@@ -18,7 +16,6 @@ You can run the script by replacing the filepaths with the ones to your own data
 - input lines are split by newline characters ('\n')
 
 ## Data exercise
-===============
 
 ### Sentiment analysis method implementation proposal
 
