@@ -1,6 +1,13 @@
 import re
 import operator
 
+#---------------------------------------------------------------
+# Assumptions for this script:
+# - python 3 is used
+# - input is utf-8 encoded
+# - input lines are split by newline characters ('\n')
+#---------------------------------------------------------------
+
 # ParseInput will parse a UTF8 encoded input text file at each new lines character
 # and return an array containing each lines. Empty lines are ignored and case is removed.
 def ParseInput(path):
