@@ -6,6 +6,9 @@ import operator
 # - python 3 is used
 # - input is utf-8 encoded
 # - input lines are split by newline characters ('\n')
+# Given more time I would:
+# - write tests for each functions
+# - write assert() statements to ensure that the correct parameters are passed
 #---------------------------------------------------------------
 
 # ParseInput will parse a UTF8 encoded input text file at each new lines character
