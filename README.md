@@ -33,7 +33,7 @@ The algorithm I would use is Naive Bayes.
 
 The Naive Bayes algorithm uses the training data set to create priors. It is one of the fastest machine learning technique, does not require much training data, and can yield good results, but it makes the “naive” assumption that every pair of features is independent. It is also a bad estimator, so the probabilities computed cannot be relied on. We would use the Bernoulli version of this method since it is designed for binary features.
 
-all algorithms are available in scikit-learn:
+The algorithm is available in scikit-learn:
 - [`sklearn.naive_bayes.BernoulliNB`](http://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.BernoulliNB.html#sklearn.naive_bayes.BernoulliNB)
 
 #### Unsupervised machine learning
