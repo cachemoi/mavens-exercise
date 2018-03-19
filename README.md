@@ -2,7 +2,7 @@
 
 ## Coding exercise
 
-The ExtractSentence script will takes as input a file containing short pieces of text, one per line, UTF-8 encoded. 
+The `ExtractSentences.py` script will takes as input a file containing short pieces of text, one per line, UTF-8 encoded. 
 The code reads the texts from the file and computes
 all the 5-word sequences which occur in any line of
 text. The output is written to a UTF-8-encoded CSV file, 
